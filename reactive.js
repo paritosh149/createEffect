@@ -21,6 +21,7 @@ export function createSignal(value) {
     value = nextValue;
 
     for (const sub of [...subscriptions]) {
+      log("Subscriber execute called.")
       sub.execute();
     }
   };
@@ -50,6 +51,6 @@ export function createEffect(fn) {
     execute,
     dependencies: new Set()
   };
-
+  log("Initial Execute called.")
   execute();
 }

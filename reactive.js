@@ -51,6 +51,6 @@ export function createEffect(fn) {
     execute,
     dependencies: new Set()
   };
-  log("Initial Execute called.")
+  log("1 RRInitial Execute called.")
   execute();
 }
